@@ -1,4 +1,49 @@
-//
-body {
-  background-color: #ff0;
+.header {
+  padding: var(--average-offset) 50px;
+  background-color: black;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    img {
+      display: block;
+    }
+  }
+
+  &__nav {
+    margin: 0 0 0 var(--big-offset);
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin: 0 var(--middle-offset) 0 0;
+    }
+  }
+
+  &__link {
+    font: var(--font-regular);
+    color: var(--color-main);
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 auto;
+  }
+
+  &__ref {
+    font: var(--font-regular);
+    color: var(--color-main);
+
+    &:not(:last-child) {
+      margin: 0 var(--small-offset) 0 0;
+    }
+  }
 }
