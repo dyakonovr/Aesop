@@ -1,0 +1,118 @@
+.demo {
+  &__container {
+    display: flex;
+  }
+
+  &__left {
+    width: 50%;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    padding: var(--big-offset);
+    width: 50%;
+    background-color: var(--color-swirl);
+  }
+
+  &__link {
+    position: relative;
+    align-self: end;
+    font: var(--font-regular);
+    font-size: 18px;
+    text-align: right;
+    color: var(--color-secondary);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-secondary);
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+  }
+
+  &__img {
+    margin: 0 var(--big-offset) 0 0;
+    width: 200px;
+    height: 230px;
+  }
+
+  &__title {
+    display: block;
+    margin: 0 0 var(--average-offset);
+    font: var(--font-regular);
+    font-size: 30px;
+    color: var(--color-secondary);
+  }
+
+  &__subtitle {
+    margin: 0 0 var(--average-offset);
+    font: var(--font-regular);
+    font-size: 18px;
+    color: var(--color-secondary);
+  }
+
+  &__text {
+    margin: 0 0 var(--average-offset);
+    max-width: 400px;
+    font: var(--font-regular);
+    color: var(--color-secondary);
+  }
+
+  &__btn {
+    width: 100%;
+    height: 60px;
+    max-width: 400px;
+    font: var(--font-regular);
+    transition: opacity 0.2s ease-in-out;
+
+    &:not(:last-child) {
+      margin: 0 0 var(--average-offset);
+    }
+
+    &--black {
+      color: var(--color-main);
+      background-color: var(--color-secondary);
+      opacity: 0.9;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &--transparent {
+      border: 1px solid rgba(#252525, 0.2);
+      color: var(--color-secondary);
+      background-color: transparent;
+      opacity: 0.9;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
