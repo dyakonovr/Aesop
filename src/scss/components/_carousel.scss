@@ -1,0 +1,38 @@
+.carousel {
+  padding: 100px 0;
+
+  &__container {
+    padding: 0 calc(var(--big-offset) * 2);
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  &__img {
+    align-self: center;
+    width: 430px;
+    height: 460px;
+  }
+
+  &__title {
+    margin: var(--small-offset) 0;
+    font: var(--font-regular);
+    text-align: center;
+  }
+
+  &__descr {
+    margin: 0;
+    font: var(--font-regular);
+    text-align: center;
+  }
+}
+
+.swiper {
+  &-wrapper {
+    padding: 0 0 50px;
+  }
+}

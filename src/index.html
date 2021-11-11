@@ -28,6 +28,25 @@
     <main>
       @include('partials/main.html')
       @include('partials/demo.html')
+      @include('partials/slider.html')
+      @include('partials/info.html', {
+      "small_descr": true,
+      "small_descr_text": "Vitamin C für Tag und Nacht",
+      "title": "Um die Struktur der Haut zu unterstützen",
+      "descr": "Vitamin C ist essentiell, um die Widerstandsfähigkeit der Haut zu erhöhen. Der effektive Inhaltsstoff kann sowohl morgens als auch abends angewendet werden und bietet bei langfristiger, regelmäßiger Anwendung enorme Vorteile für die Haut.",
+      "img": "img/3.png",
+      "btn_text": "Erfahren Sie mehr über Vitamin C"
+      })
+      @include('partials/slider.html')
+      @include('partials/info.html', {
+        "small_descr": false,
+        "small_descr_text": "",
+        "title": "Wir heißen Sie online willkommen",
+        "descr": "Genau wie in unsere Geschäften, in denen wir unsere Kunden persönlich begrüßen dürfen, möchten wir dies auch in unserem Online-Store tun. Es ist uns eine Freude, Ihnen virtuelle Unterstützung durch unsere Consultants und passende Lieferoptionen anzubieten.",
+        "img": "img/4.png",
+        "btn_text": "Hilfe"
+      })
+      @include('partials/quote.html')
     </main>
     @include('partials/footer.html')
   </div>
