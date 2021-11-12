@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .footer {
   &__container {
     display: grid;
@@ -5,6 +7,18 @@
     padding: calc(var(--big-offset) * 2) var(--big-offset);
     background-color: var(--color-secondary);
     gap: calc(var(--big-offset) * 2) var(--big-offset);
+
+    @include large-screen {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include middle-screen {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-screen {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__input {

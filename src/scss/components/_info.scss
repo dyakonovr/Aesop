@@ -1,12 +1,27 @@
+@import "../mixins";
+
 .info {
   &__container {
     display: flex;
     align-items: center;
+
+    @include xlarge-screen {
+      flex-direction: column;
+      align-items: unset;
+    }
   }
 
   &__left {
     padding: calc(var(--big-offset) * 2);
     width: 40%;
+
+    @include xlarge-screen {
+      width: auto;
+    }
+
+    @include small-screen {
+      padding: var(--average-offset);
+    }
   }
 
   &__right {
@@ -15,6 +30,10 @@
     img {
       display: block;
       width: 100%;
+    }
+
+    @include xlarge-screen {
+      width: auto;
     }
   }
 
@@ -30,6 +49,10 @@
 
     &--small {
       font-size: 16px;
+    }
+
+    @include xlarge-screen {
+      max-width: 600px;
     }
   }
 

@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .demo {
   &__container {
     display: flex;
@@ -9,6 +11,11 @@
     img {
       display: block;
       width: 100%;
+      height: 100%;
+    }
+
+    @include large-screen {
+      display: none;
     }
   }
 
@@ -18,6 +25,10 @@
     padding: var(--big-offset);
     width: 50%;
     background-color: var(--color-swirl);
+
+    @include large-screen {
+      width: 100vw;
+    }
   }
 
   &__link {
@@ -54,12 +65,32 @@
     align-items: center;
     justify-content: center;
     margin: auto 0;
+    padding: var(--big-offset) 0 0;
+
+    @include small-screen {
+      flex-direction: column;
+    }
   }
 
   &__img {
     margin: 0 var(--big-offset) 0 0;
     width: 200px;
     height: 230px;
+
+    @include small-screen {
+      margin: 0;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__inner {
+    @include small-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__subtitle {
@@ -77,6 +108,7 @@
   }
 
   &__btn {
+    padding: var(--small-offset);
     width: 100%;
     height: 60px;
     max-width: 400px;

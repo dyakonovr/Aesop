@@ -4,7 +4,7 @@
   padding: 0;
   width: var(--burger-width);
   height: var(--burger-height);
-  color: #000;
+  color: var(--color-main);
   background-color: transparent;
   cursor: pointer;
 
@@ -27,7 +27,7 @@
     top: calc(100% - var(--burger-line-height));
   }
 
-  &__line {
+  &-line {
     position: absolute;
     left: 0;
     top: 50%;
@@ -51,7 +51,7 @@
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
-    .burger__line {
+    .header__burger-line {
       transform: scale(0);
       transition: transform 0.3s ease-in-out;
     }

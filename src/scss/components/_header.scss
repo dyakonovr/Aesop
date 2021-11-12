@@ -1,9 +1,15 @@
+@import "../mixins";
+
 .header {
   padding: var(--average-offset) 50px;
 
   &__container {
     display: flex;
     align-items: center;
+
+    @include middle-screen {
+      justify-content: space-between;
+    }
   }
 
   &__logo {
@@ -14,6 +20,10 @@
 
   &__nav {
     margin: 0 0 0 var(--big-offset);
+
+    @include middle-screen {
+      display: none;
+    }
   }
 
   &__list {
@@ -35,6 +45,10 @@
     display: flex;
     align-items: center;
     margin: 0 0 0 auto;
+
+    @include middle-screen {
+      display: none;
+    }
   }
 
   &__ref {
@@ -44,5 +58,17 @@
     &:not(:last-child) {
       margin: 0 var(--small-offset) 0 0;
     }
+  }
+
+  &__burger {
+    @include burger;
+
+    @include middle-screen {
+      display: block;
+    }
+  }
+
+  @include small-screen {
+    padding: var(--average-offset);
   }
 }

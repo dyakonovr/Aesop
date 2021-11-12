@@ -1,8 +1,10 @@
+@import "../mixins";
+
 .notice {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--middle-offset) 0;
+  padding: var(--middle-offset);
 
   &__text {
     margin: 0;
@@ -29,6 +31,10 @@
       opacity: 1;
       visibility: visible;
       transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+
+      @include xlarge-screen {
+        display: none;
+      }
     }
 
     &:hover {
@@ -36,6 +42,11 @@
         opacity: 0;
         visibility: hidden;
       }
+    }
+
+    @include xlarge-screen {
+      margin: 0;
+      border-bottom: 1px solid var(--color-main);
     }
   }
 
