@@ -28,12 +28,14 @@
     margin: var(--small-offset) 0;
     font: var(--font-regular);
     text-align: center;
+    color: var(--color-secondary);
   }
 
   &__descr {
     margin: 0;
     font: var(--font-regular);
     text-align: center;
+    color: var(--color-secondary);
   }
 }
 
