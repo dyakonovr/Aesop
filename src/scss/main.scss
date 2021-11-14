@@ -5,6 +5,7 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/preloader";
 @import "./components/header";
 @import "./components/notice";
 @import "./components/main";

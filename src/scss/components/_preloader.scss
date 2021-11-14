@@ -1,0 +1,49 @@
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-secondary);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &__container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__done {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__logo {
+    width: 300px;
+  }
+
+  &__percent {
+    margin: 0;
+    font: var(--font-regular);
+    font-size: 40px;
+    text-align: center;
+    color: var(--color-main);
+
+    @include small-screen {
+      font-size: 30px;
+    }
+  }
+
+  &__progress {
+    margin: var(--big-offset) 0 var(--small-offset);
+    width: 1%;
+    height: 10px;
+    max-width: 400px;
+    background-color: var(--color-main);
+    transition: width 0.3s ease-in-out;
+  }
+}
