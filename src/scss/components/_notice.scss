@@ -50,11 +50,24 @@
     }
   }
 
+  &__plus {
+    margin: 0 0 0 var(--small-offset);
+    opacity: 0.3;
+
+    svg {
+      fill: var(--color-main);
+    }
+  }
+
   &--orange {
     background-color: var(--color-notice);
   }
 
   &--black {
     background-color: var(--color-secondary);
+  }
+
+  @include middle-screen {
+    justify-content: space-between;
   }
 }

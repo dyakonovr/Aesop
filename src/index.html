@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>New site</title>
+  <title>Aesop</title>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -19,11 +19,13 @@
     "text": "Unsere deutschen Geschäfte sind nun wieder regulär oder per Terminvereinbarung geöffnet.",
     "link": true,
     "link_text": "Aktuelle Informationen zu unseren Geschäften",
+    "plus_icon": false,
     })
     @include('partials/notice.html', {
-    "sub_class": "notice--black",
+    "sub_class": "notice--black notice--plus",
     "text": "Wir bieten kostenfreien Versand nach Deutschland und Österreich an.",
     "link": false,
+    "plus_icon": true,
     })
     <main>
       @include('partials/main.html')
