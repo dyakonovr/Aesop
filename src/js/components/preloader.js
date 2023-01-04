@@ -1,3 +1,5 @@
+import scrollToggle from '../functions/scrollToggle.js';
+
 const preloader = document.querySelector('.preloader');
 const images = document.images;
 const imagesTotal = images.length;

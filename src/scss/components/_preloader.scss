@@ -33,7 +33,7 @@
     text-align: center;
     color: var(--color-main);
 
-    @include small-screen {
+    @include small-tablet {
       font-size: 30px;
     }
   }

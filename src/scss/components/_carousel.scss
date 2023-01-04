@@ -1,12 +1,10 @@
-@import "../mixins";
-
 .carousel {
   padding: 100px 0;
 
   &__container {
     padding: 0 calc(var(--big-offset) * 2);
 
-    @include small-screen {
+    @include mobile {
       padding: 0 var(--small-offset);
     }
   }

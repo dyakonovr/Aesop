@@ -1,5 +1,3 @@
-@import "../mixins";
-
 .footer {
   &__container {
     display: grid;
@@ -8,15 +6,15 @@
     background-color: var(--color-secondary);
     gap: calc(var(--big-offset) * 2) var(--big-offset);
 
-    @include large-screen {
+    @include tablet {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include middle-screen {
+    @include small-tablet {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include small-screen {
+    @include mobile {
       grid-template-columns: 1fr;
     }
   }
@@ -69,7 +67,7 @@
         margin: 0 0 0 var(--small-offset);
         width: 10px;
         height: 10px;
-        background-image: url("../img/link-arrow.svg");
+        background-image: url("../@svg/link-arrow.svg");
         background-size: 100%;
         background-repeat: no-repeat;
       }
